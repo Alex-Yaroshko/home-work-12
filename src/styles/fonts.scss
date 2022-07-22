@@ -1,0 +1,43 @@
+// FONT MIXINS
+@mixin normal400 {
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+
+
+
+// 
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+nav {
+    @include normal400;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 1px;
+    a {
+        color: #FFFFFF;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+
+// INTRO
+.intro__title {
+    @include normal400;
+    font-size: 114px;
+    line-height: 125px;
+    color: #FFFFFF;
+    & :nth-child(1) {
+        @include normal400;
+        font-size: 11px;
+        line-height: 15px;
+        letter-spacing: 0.2px;
+        color: #999999;
+    }
+}

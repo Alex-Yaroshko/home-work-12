@@ -1,0 +1,25 @@
+{
+  "name": "home-work-12",
+  "version": "1.0.0",
+  "description": "landing page hw-12",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alex-Yaroshko/home-work-12.git"
+  },
+  "author": "Alex_Yaroshko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alex-Yaroshko/home-work-12/issues"
+  },
+  "homepage": "https://github.com/Alex-Yaroshko/home-work-12#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
+    "parcel": "^2.6.2",
+    "sass": "^1.53.0"
+  }
+}
