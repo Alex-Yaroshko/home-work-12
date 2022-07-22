@@ -2,6 +2,9 @@
 @mixin color-black {
     background-color: #000000;
 }
+@mixin color-white {
+    background-color: #FFFFFF;
+} 
 
 // **********************
 
@@ -66,5 +69,39 @@
                 padding-bottom: 5px;
             }
         }
+    }
+}
+// INFO
+.info {
+    @include color-white;
+    // margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 140px 0px 100px 0px;
+    & h5 {
+        margin-bottom: 90px;
+    }
+    &__div {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 40px 0px 40px 0px;
+        &-circle {
+        width: 41.35px;
+        height: 41.35px;;
+        border-radius: 100%;
+        border: 1.02px solid #000000;
+        }
+        &-p2 {
+           padding-left: 170px;
+        }
+        &-p3 {
+            padding-left: 190px;
+         }
+         &-p4 {
+            padding-right: 30px;
+         }
     }
 }
