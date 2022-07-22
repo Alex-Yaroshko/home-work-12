@@ -36,10 +36,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 80px;
-    border: 1px solid white;
+    padding: 100px 0px;
+    // &__fig {
+    //     border: 1px solid white;
+    // }
     &__title {
-        border: 1px solid white;
         & :nth-child(1) {
             padding-left: 196px;
         }
@@ -50,5 +51,20 @@
             padding-left: 346px;
         }
 
+    }
+    &__subtitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 176px;
+        &-inner1 {
+            max-width: 510px;
+        }
+        &-inner2 {
+            max-width: 175px;
+            & h3 {
+                padding-bottom: 5px;
+            }
+        }
     }
 }

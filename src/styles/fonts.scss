@@ -41,3 +41,26 @@ nav {
         color: #999999;
     }
 }
+.intro__subtitle {
+    @include normal400;
+    color: #FFFFFF;
+    &-inner1 {
+        font-size: 19px;
+        line-height: 27px;
+    }
+    &-inner2 {
+        font-size: 20px;
+        line-height: 22px;
+        & h3 {
+            @include normal400;
+            font-size: 20px;
+            line-height: 22px;
+            color: #FFFFFF;
+        }
+        & p {
+            font-size: 11px;
+            line-height: 16px;
+            opacity: 40%;
+        }
+    }
+}
