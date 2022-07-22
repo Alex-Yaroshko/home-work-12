@@ -89,4 +89,29 @@ nav {
     }
 }
 }
-// 
+// HISTORIE
+.historie__intro {
+    @include normal400;
+    font-size: 11px;
+    line-height: 16px;
+    &-item-1 {
+        @include normal400;
+        font-size: 114px;
+        line-height: 122px;
+        color: #000000;
+        max-width: 576px;
+    }
+    p {
+        padding-top: 13px;
+    }
+    &-item-3 {
+        font-size: 18px;
+        line-height: 23px;
+        
+    }
+    &-item-11 {
+        font-size: 17px;
+    line-height: 23px;
+    }
+}
+
