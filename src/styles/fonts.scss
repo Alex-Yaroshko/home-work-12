@@ -128,6 +128,42 @@ nav {
     text-transform: uppercase;
 }
 
+// INSPIRACJE
+.inspiracje__intro {
+    @include normal400;
+    font-size: 12px;
+    line-height: 17px;
+    & span {
+        font-size: 10px;
+        line-height: 13px;
+        color: rgba(0, 0, 0, 0.5);
+        opacity: 50%;
+        padding-right: 10px;
+    }
+    &-item-2 {
+        font-size: 20px;
+        line-height: 26px;
+       & h3 {
+            @include normal400;
+            font-size: 114px;
+            line-height: 122px;
+            padding-bottom: 35px;
+        }
+    }
+    &-item-7 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+
+
+
+
+
+
+
+
 // FOOTER
 .footer {
     @include normal400;
