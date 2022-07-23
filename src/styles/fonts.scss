@@ -3,10 +3,12 @@
     font-style: normal;
     font-weight: 400;
 }
-
-
-
-
+@mixin color-pink {
+   color: #E8244F;
+}
+@mixin color-white {
+    color:#FFFFFF;
+}
 
 // 
 
@@ -21,7 +23,7 @@ nav {
     line-height: 12px;
     letter-spacing: 1px;
     a {
-        color: #FFFFFF;
+        @include color-white;
         text-decoration: none;
         text-transform: uppercase;
     }
@@ -32,7 +34,7 @@ nav {
     @include normal400;
     font-size: 114px;
     line-height: 125px;
-    color: #FFFFFF;
+    @include color-white;
     & :nth-child(1) {
         @include normal400;
         font-size: 11px;
@@ -43,7 +45,7 @@ nav {
 }
 .intro__subtitle {
     @include normal400;
-    color: #FFFFFF;
+    @include color-white;
     &-inner1 {
         font-size: 19px;
         line-height: 27px;
@@ -53,9 +55,9 @@ nav {
         line-height: 22px;
         & h3 {
             @include normal400;
+            @include color-white;
             font-size: 20px;
             line-height: 22px;
-            color: #FFFFFF;
         }
         & p {
             font-size: 11px;
@@ -69,11 +71,11 @@ nav {
 .info {
     & h5 {
         @include normal400;
+        @include color-pink;
         font-size: 10px;
         line-height: 34px;
         letter-spacing: 0.44px;
         text-transform: uppercase;
-        color: #E8244F;
     }
     &__div  {
         @include normal400;
@@ -115,3 +117,35 @@ nav {
     }
 }
 
+// LABELS
+
+.labels__title {
+    @include color-pink;
+    @include normal400;
+    font-size: 10px;
+    line-height: 34px;
+    letter-spacing: 0.44px;
+    text-transform: uppercase;
+}
+
+// FOOTER
+.footer {
+    @include normal400;
+    @include color-white;
+    &__title {
+        font-size: 10px;
+        line-height: 34px;
+        letter-spacing: 0.44px;
+        text-transform: uppercase;
+    }
+    &__mail {
+        font-size: 65px;
+        line-height: 98px;
+    }
+    &__lic {
+        font-size: 12px;
+        line-height: 17px;
+        color: rgba(255, 255, 255, 0.4);
+        opacity: 70%;
+    }
+}
