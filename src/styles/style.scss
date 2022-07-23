@@ -196,7 +196,7 @@
 // INSPIRACJE
 .inspiracje {
         @include color-white;
-        padding: 120px 0px 65px 0px;
+        padding: 120px 0px 50px 0px;
         &__intro {
         display:grid;
         grid-template-areas: 'item-1 item-2 item-2 item-2'
@@ -204,7 +204,6 @@
                             'item-7 item-7  item-8 item-9';
         grid-template-columns: repeat(4, 1fr) ;
         gap:30px;
-        border: solid 1px black;
         &-item-1 {
             grid-area: item-1;
             width:fit-content;
@@ -212,7 +211,6 @@
         &-item-2 {
             grid-area: item-2;
             max-width:800px;
-            border: solid 1px black;
             padding: 55px 0px 0px 43px;
         }
         &-item-3 {
@@ -247,6 +245,77 @@
         }
 }
 }
+
+// MARQUEE
+.marquee {
+    padding: 100px 0;
+    &__container {
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 0 auto;
+        width: 100%;
+        padding: 2.5vw 0;
+        line-height: 1;
+    }
+}
+.scroll {
+    font-size: 114px;
+    animation: marquee 12s linear infinite;
+    display: inline-block;
+    padding: 2px 30px;
+    transition: all .3s ease;
+    color: #888;
+}
+@keyframes marquee {
+ 0% {
+    transform: translateX(0);
+}
+
+100% {
+    transform: translateX(-100%);
+}
+}
+.scroll-rev {
+    animation-direction: reverse;
+}
+
+
+
+// ABOUT
+.about {
+    @include color-white;
+    padding: 100px 0px 100px 0px;
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        gap:130px;
+        justify-content: center;
+        &-left {
+            padding-top: 90px;
+            & p {
+                max-width: 524px;
+            }
+            & figure {
+                padding-top: 40px;
+            }
+        }
+        &-right {
+            & p {
+                max-width: 528px;
+                padding-top: 50px;
+            }
+            .about-sign {
+                display: flex;
+                flex-direction: row;
+                gap: 41px;
+            }
+        }
+    }
+}
+
+
+
+
 
 
 

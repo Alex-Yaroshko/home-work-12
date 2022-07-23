@@ -155,7 +155,21 @@ nav {
         line-height: 26px;
     }
 }
-
+// ABOUT
+.about__inner {
+    @include normal400;
+    &-left p {
+        font-size: 46px;
+        line-height: 57px;
+    }
+    &-right p {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .about-sign p {
+        padding-top: 21px;
+    }
+}
 
 
 
