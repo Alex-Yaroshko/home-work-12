@@ -59,7 +59,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 176px;
+        padding-top: 126px;
         &-inner1 {
             max-width: 510px;
         }
@@ -190,9 +190,70 @@
         flex-direction: row;
     }
 }
-
-
-
+// TABS
+.tabs {
+    @include color-black;
+    padding: 100px 0px;
+    &__inner {
+        @include color-black;
+        display: flex;
+        gap: 250px;
+    }
+    &__item {
+        display: block;
+        padding-bottom: 28px;
+    }
+    &__items {
+        max-width:125px;
+    }
+    &__block {
+        display: none;
+        hr {
+            max-width: 140px;
+            margin: 0%;
+        }
+    }
+    &__block:target {
+        display: block; 
+    }
+    &__block h3 {
+        max-width: 534px;
+    }
+    &__block p {
+        max-width: 416px;
+    }
+    &__item {
+        transition: .3s;
+    }
+    &__item:hover {
+        color: #E8244F;
+    }
+    &__item:nth-child(2):hover {
+        color: #164ae4;
+    }
+    &__item:nth-child(4):hover {
+        color: #164ae4;
+    }
+    &__spans {
+        display: flex;
+        flex-direction: row;
+        gap:40px;
+        overflow: hidden;
+        padding-top:130px;
+    }
+    &__span {
+        transition: .3s;
+    }
+    &__span:hover {
+        color: #E8244F;
+    }
+    &__span:nth-child(2):hover {
+        color: #164ae4;
+    }
+    &__span:nth-child(4):hover {
+        color: #164ae4;
+    }
+}
 // INSPIRACJE
 .inspiracje {
         @include color-white;
@@ -248,13 +309,13 @@
 
 // MARQUEE
 .marquee {
-    padding: 100px 0;
+    padding: 50px 0;
     &__container {
         overflow: hidden;
         white-space: nowrap;
         margin: 0 auto;
         width: 100%;
-        padding: 2.5vw 0;
+        padding: 50px 0;
         line-height: 1;
     }
 }
@@ -356,5 +417,14 @@
                 padding-left: 85px;
             }
         }
+    }
+}
+
+// to-top
+.to-top {
+    text-align: center;
+    padding: 45px 0;
+    & a:hover {
+        cursor: pointer;
     }
 }

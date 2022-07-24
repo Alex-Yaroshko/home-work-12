@@ -9,6 +9,9 @@
 @mixin color-white {
     color:#FFFFFF;
 }
+@mixin color-black {
+    color: #000000;
+}
 
 // 
 
@@ -79,7 +82,7 @@ nav {
     }
     &__div  {
         @include normal400;
-        color: #000000;
+        @include color-black;
         & h3 {
         @include normal400;
         font-size: 46px;
@@ -100,7 +103,7 @@ nav {
         @include normal400;
         font-size: 114px;
         line-height: 122px;
-        color: #000000;
+        @include color-black;
         max-width: 576px;
     }
     p {
@@ -127,6 +130,49 @@ nav {
     letter-spacing: 0.44px;
     text-transform: uppercase;
 }
+
+// TABS
+.tabs {
+    &__block h3 {
+        @include normal400;
+        font-size: 58px;
+        line-height: 70px;
+        @include color-white;
+        padding-bottom: 50px;
+    }
+    &__block p {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 26px;
+        @include color-white;
+        padding-bottom: 22px;
+    }
+    &__items {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 28px;
+        @include color-white;
+    }
+    &__span {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 68px;
+        line-height: 148px;
+        color: #FFFFFF;
+        opacity:60%;
+        text-decoration: none;
+    }
+}
+
+
+
+
+
+
+
+
 
 // INSPIRACJE
 .inspiracje__intro {
@@ -178,6 +224,9 @@ nav {
 
 
 
+
+
+
 // FOOTER
 .footer {
     @include normal400;
@@ -198,4 +247,14 @@ nav {
         color: rgba(255, 255, 255, 0.4);
         opacity: 70%;
     }
+}
+
+
+// to-top
+.to-top a {
+    @include normal400;
+    @include color-black;
+    font-size: 46px;
+    line-height: 59px;
+    text-decoration: none;
 }
