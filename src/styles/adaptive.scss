@@ -1,0 +1,168 @@
+
+
+// 768px
+@media (max-width:767px) {
+    .tabs__inner {
+        display: flex;
+        gap: 125px;
+        h3 {
+            font-size: 40px;
+            line-height: 40px;
+        }
+        p {
+            font-size: 14px;
+            line-height: 20px;
+        }
+}
+    .intro__title {
+        font-size: 80px;
+        line-height: 80px;
+    }
+    .intro__subtitle {
+        &-inner1 {
+            font-size: 16px;
+            line-height: 15px;
+            max-width: 330px;
+        }
+        &-inner2 {
+            max-width: 100px;
+            & h3 {
+                padding-bottom: 5px;
+            }
+        }
+    }
+    .info {
+        padding:0px;
+    }
+    .info__div  {
+        & h3 {
+        font-size: 28px;
+        line-height: 55px;
+        }
+        & p {
+            font-size: 10px;
+            line-height: 21px;
+        }
+    .historie__intro {
+        font-size: 16px;
+        line-height: 20px;
+        display:grid;
+        grid-template-areas: 'item-1 item-1 . item-2'
+                            'item-3 item-3 item-4 item-5'
+                            '. item-6 item-7 item-8'
+                            'item-9 item-10 item-11 item-11';
+        grid-template-columns: repeat(4, 1fr) ;
+        gap:20px;
+        &-item-3 {
+            font-size: 11px;
+            line-height: 23px;
+            
+        }
+        &-item-11 {
+            font-size: 11px;
+            line-height: 23px;
+        }
+}
+}
+
+// 1024px
+@media (max-width:1024px) {
+    .intro {
+        &__title {
+            & :nth-child(1) {
+                padding-left: 0px;
+            }
+            & :nth-child(2) {
+                padding-left: 0px;
+            }
+            & :nth-child(3) {
+                padding-left: 0px;
+            }
+    
+        }
+    }
+    .info {
+        padding:80px;
+    }
+}
+@media (max-width:1200px) {
+    .historie__intro {
+        font-size: 18px;
+        line-height: 22px;
+        display:grid;
+        grid-template-areas: 'item-1 item-1'
+                            'item-2 item-3'
+                            'item-4 item-5'
+                            'item-6 item-7'
+                            'item-8 item-9'
+                            'item-10 item-11';
+        grid-template-columns: repeat(2, 1fr) ;
+        gap:10px;
+        &-item-3 {
+            font-size: 22px;
+            line-height: 23px;
+            max-width: 450px;
+        }
+        &-item-11 {
+            font-size: 22px;
+            line-height: 23px;
+            max-width: 300px;
+        }
+    }
+    .tabs__spans {
+        overflow: scroll;
+    }
+    .labels {
+        overflow: scroll;
+    }
+}
+// 480px
+@media (max-width:480px) {
+    .tabs {
+        &__inner {
+            display: flex;
+            gap: 60px;
+            padding-right: 10px;
+            h3 {
+                font-size: 26px;
+                line-height: 24px;
+            }
+            p {
+                font-size: 14px;
+                line-height: 16px;
+            }
+    }
+        &__items {
+            font-size: 10px;
+            line-height: 24px;
+        }
+    }
+
+    .intro__title {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .info {
+        padding:40px;
+    }
+    .info__div {
+        & h3 {
+            font-size: 16px;
+            line-height: 18px;
+            }
+            &-p2 {
+                padding-right: 0px;
+                padding-left: 0px;
+            }
+            &-p3 {
+                padding-right: 0px;
+                padding-left: 0px;
+            }
+            &-p4 {
+                padding-right: 0px;
+                padding-left: 0px;
+            }
+
+    }
+}
+}

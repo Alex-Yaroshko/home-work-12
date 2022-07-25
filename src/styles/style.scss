@@ -7,14 +7,42 @@
 } 
 
 // **********************
-
-
-// HEADER
 .container {
     max-width: 1300px;
     width: 100%;
     margin: 0 auto;
+    border:solid black 1px;
 }
+
+
+
+
+@media (max-width:1200px) {
+    .container {
+        max-width: 970px;
+    }
+}
+@media (max-width:992px) {
+    .container {
+        max-width: 750px;
+    }
+}
+@media (max-width:767px) {
+    .container {
+        max-width: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+// HEADER
+
 .header {
     @include color-black;
     margin: 0 auto;
@@ -26,8 +54,7 @@
         justify-content: space-between;
         align-items: center;
         .nav a {
-            transition: 0.3s;
-            opacity: 0.75;
+            transition: .3s;
             margin-right: 34px;
         }
     }
@@ -74,7 +101,6 @@
 // INFO
 .info {
     @include color-white;
-    // margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,8 +115,8 @@
         align-items: center;
         margin: 40px 0px 40px 0px;
         &-circle {
-        width: 41.35px;
-        height: 41.35px;;
+        max-width: 41.35px;
+        max-height: 41.35px;
         border-radius: 100%;
         border: 1.02px solid #000000;
         }
@@ -173,7 +199,6 @@
 .labels {
     display: flex;
     padding: 100px 0px 115px 0px;
-    // justify-content: space-between;
     flex-direction: row;
     &__title {
         margin-bottom: 90px;
@@ -238,7 +263,6 @@
         display: flex;
         flex-direction: row;
         gap:40px;
-        overflow: hidden;
         padding-top:130px;
     }
     &__span {
@@ -306,7 +330,6 @@
         }
 }
 }
-
 // MARQUEE
 .marquee {
     padding: 50px 0;
@@ -339,9 +362,6 @@
 .scroll-rev {
     animation-direction: reverse;
 }
-
-
-
 // ABOUT
 .about {
     @include color-white;
@@ -373,19 +393,6 @@
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 // FOOTER
 .footer {
     @include color-black;
@@ -419,7 +426,6 @@
         }
     }
 }
-
 // to-top
 .to-top {
     text-align: center;
