@@ -2,6 +2,10 @@
 
 // 768px
 @media (max-width:767px) {
+    .tabs__spans a {
+        font-size: 50px;
+        line-height: 80px;
+    }
     .tabs__inner {
         display: flex;
         gap: 125px;
@@ -43,27 +47,56 @@
             font-size: 10px;
             line-height: 21px;
         }
-    .historie__intro {
-        font-size: 16px;
-        line-height: 20px;
-        display:grid;
-        grid-template-areas: 'item-1 item-1 . item-2'
-                            'item-3 item-3 item-4 item-5'
-                            '. item-6 item-7 item-8'
-                            'item-9 item-10 item-11 item-11';
-        grid-template-columns: repeat(4, 1fr) ;
-        gap:20px;
-        &-item-3 {
-            font-size: 11px;
-            line-height: 23px;
-            
+    }
+    .historie {
+        img {
+            max-width: 100%;
         }
-        &-item-11 {
-            font-size: 11px;
-            line-height: 23px;
+        &__intro-item-1 {
+            font-size: 60px;
         }
+    }
+    .inspiracje {
+    img {
+        max-width: 100%;
+    &__intro-item-2 h3 {
+        font-size: 60px;
+    }
+    }
+    }
+    .about {
+        &__inner {
+            gap:10px;
+            &-left {
+                padding-top: 30px;
+            }
+            &-right p {
+                font-size: 24px;
+                line-height: 24px;
+            }
+            &-right {
+                & p {
+                    padding-top: 10px;
+                }
+            .about-sign {
+                gap:10px;
+                & p {
+                    padding-top: 21px;
+                }
+            }
+            }
+        }
+    }
+    .footer__mail a {
+        font-size: 55px;
+        line-height: 87px;
+    }
 }
-}
+
+
+
+
+
 
 // 1024px
 @media (max-width:1024px) {
@@ -81,11 +114,11 @@
     
         }
     }
-    .info {
-        padding:80px;
-    }
 }
+
 @media (max-width:1200px) {
+    section {
+        padding: 50px 0px 50px 0px;}
     .historie__intro {
         font-size: 18px;
         line-height: 22px;
@@ -98,26 +131,71 @@
                             'item-10 item-11';
         grid-template-columns: repeat(2, 1fr) ;
         gap:10px;
+        & p {
+            max-width: 315px;
+        }
+        &-item-1 {
+            font-size: 100px;
+        }
         &-item-3 {
+            padding: 5px;
             font-size: 22px;
-            line-height: 23px;
-            max-width: 450px;
+            line-height: 22px;
+            
         }
         &-item-11 {
+            padding: 0;
             font-size: 22px;
             line-height: 23px;
-            max-width: 300px;
         }
     }
-    .tabs__spans {
+    .inspiracje {
+        padding: 120px 0px 50px 0px;
+        &__intro {
+        display:grid;
+        grid-template-areas: 'item-2 item-2'
+                            'item-1 item-3 '
+                             'item-4 item-5'
+                            'item-6 item-8'
+                            'item-9 item-7';
+        grid-template-columns: repeat(2, 1fr) ;
+        gap:10px; 
+        &-item-2 {
+            padding: 0;
+
+            & h3 {
+                font-size: 100px;
+            }
+        }
+        }
+    }
+    .tabs__spans  {
         overflow: scroll;
     }
     .labels {
         overflow: scroll;
     }
+    .info h5 {
+        margin: 0;
+        padding: 0;
+    }
 }
 // 480px
 @media (max-width:480px) {
+    .historie {
+        &__intro-item-1 {
+            font-size: 50px;
+            line-height: 60px;
+        }
+        &__intro-item-3 {
+            font-size: 16px;
+        }
+    }
+    .inspiracje {
+        &__intro-item-2 h3 {
+            font-size: 50px;
+        }
+    }
     .tabs {
         &__inner {
             display: flex;
@@ -136,15 +214,17 @@
             font-size: 10px;
             line-height: 24px;
         }
+        &__spans a {
+            font-size: 35px;
+            line-height: 60px;
+        }
     }
 
     .intro__title {
         font-size: 50px;
         line-height: 50px;
     }
-    .info {
-        padding:40px;
-    }
+
     .info__div {
         & h3 {
             font-size: 16px;
@@ -163,6 +243,36 @@
                 padding-left: 0px;
             }
 
+    }
+    .about {
+        &__inner {
+            &-left {
+                & p {
+                    font-size: 18px;
+                    line-height: 26px;
+                }
+            }&-right p {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            &-right {
+                & p {
+                    padding-top: 10px;
+                }
+            .about-sign {
+                gap:10px;
+                & p {
+                    padding-top: 10px;
+                }
+            }
+            }
+        }
+    }
+    .footer__mail {
+        max-width: 280px;
+    & a {
+        font-size: 41px;
+        line-height: 69px;
     }
 }
 }

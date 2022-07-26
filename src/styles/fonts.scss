@@ -237,15 +237,21 @@ nav {
         letter-spacing: 0.44px;
         text-transform: uppercase;
     }
-    &__mail {
+    &__mail a {
+        @include color-white;
         font-size: 65px;
         line-height: 98px;
+        text-decoration: none;
     }
     &__lic {
         font-size: 12px;
         line-height: 17px;
         color: rgba(255, 255, 255, 0.4);
         opacity: 70%;
+        &-inner-span {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.4);
+        }
     }
 }
 

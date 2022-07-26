@@ -1,5 +1,46 @@
+@mixin color-pink {
+    color: #E8244F;
+ }
+ @mixin color-white {
+     color:#FFFFFF;
+ }
+ @mixin color-black {
+     color: #000000;
+ }
+
+
+
+
 // HEADER
 .nav a:hover {
     color: #E8244F;
 }
 
+
+// INFO
+.info__div {
+    transition: .3s;
+    &:hover {
+        background-color: black;
+        @include color-white;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+}
+
+// HISTORJE
+.historie__intro{
+    transition: .3s;
+    & img:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+}
+
+// Footer
+.footer__lic-inner-span {
+    transition: .3s;
+}
+.footer__lic-inner-span:hover {
+    @include color-pink;
+}
