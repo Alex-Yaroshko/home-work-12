@@ -9,29 +9,30 @@
         width:30px;
         text-align: center;
         right: 20px;
-        top:30px;
+        top:40px;
     }
     [for=burger]:before {
         content: '☰';
         color: #E8244F;
     }
-    nav {
+    .nav {
         display:none;
         margin-top: 170px;
-        background-color: black;
-        width: 80%;
+        background-color: black;  
+        width: 100%;
+        left:0;
         z-index: 3;
         border-radius: 4px;
         user-select: none;
     }
-    nav ul {
+    .nav ul {
         list-style-type: none;
     }
-    nav li {
+    .nav li {
         padding:10px;
         border-bottom: solid 0.5px white;
     }
-    #burger:checked + label + nav {
+    #burger:checked + label + .nav {
         display: block;
         position: fixed;
         animation: show 1s ease;
@@ -49,7 +50,7 @@
         }
     }
 
-    
+
     // ************
     .tabs__spans a {
         font-size: 50px;
@@ -140,6 +141,9 @@
         font-size: 55px;
         line-height: 87px;
     }
+    .scroll {
+        font-size: 100px;
+    }
 }
 
 
@@ -166,8 +170,13 @@
 }
 
 @media (max-width:1200px) {
-    section {
-        padding: 50px 0px 50px 0px;}
+    .tabs, .labels, .historie, .about, 
+    .info, .inspiracje, .marquee, .footer {
+        padding: 50px 0px;
+    }
+    .labels__title {
+        margin-bottom: 60px;
+    }
     .historie__intro {
         font-size: 18px;
         line-height: 22px;
@@ -199,7 +208,6 @@
         }
     }
     .inspiracje {
-        padding: 120px 0px 50px 0px;
         &__intro {
         display:grid;
         grid-template-areas: 'item-2 item-2'
@@ -221,9 +229,6 @@
     .tabs__spans  {
         overflow: scroll;
     }
-    .labels {
-        overflow: scroll;
-    }
     .info h5 {
         margin: 0;
         padding: 0;
@@ -231,6 +236,9 @@
 }
 // 480px
 @media (max-width:480px) {
+    .labels__title {
+        margin-bottom: 30px;
+    }
     .historie {
         &__intro-item-1 {
             font-size: 50px;
@@ -241,6 +249,7 @@
         }
     }
     .inspiracje {
+        padding-top: 50px;
         &__intro-item-2 h3 {
             font-size: 50px;
         }
@@ -311,10 +320,74 @@
         line-height: 69px;
     }
 }
+.marquee__container {
+    padding: 20px;
+}
+.scroll {
+    font-size: 70px;
+}
 }
 @media (min-width:764px) {
     .nav ul li {
         display: inline;
     }
 }
+
+@media (max-width:320px) {
+       .labels__title {
+        margin-bottom: 15px;
+    }
+    .tabs, .labels, .historie, .about, 
+    .info, .inspiracje, .marquee, .footer {
+        padding: 25px 0px;
+    }
+    .historie{
+        padding-top: 0px;
+    &__intro {
+        display:grid;
+        grid-template-areas: 'item-1' 
+                            'item-2' 
+                            'item-3' 
+                            'item-4' 
+                            'item-5' 
+                            'item-6' 
+                            'item-7'
+                            'item-8'
+                            'item-9'
+                            'item-10'
+                            'item-11';
+        grid-template-columns: repeat(1, 1fr) ;
+        gap:10px;
+    }
+}
+.inspiracje {
+    padding-top: 0px;
+    &__intro-item-2 h3 {
+        line-height: 80px;
+    }
+&__intro {
+    display:grid;
+    grid-template-areas: 'item-2' 
+                        'item-1' 
+                        'item-3' 
+                        'item-4' 
+                        'item-5' 
+                        'item-6' 
+                        'item-7'
+                        'item-8'
+                        'item-9';
+    grid-template-columns: repeat(1, 1fr) ;
+    gap:10px;
+}
+}
+.about__inner {
+    flex-direction: column;
+}
+.marquee__container {
+    padding: 15px;
+}
+.scroll {
+    font-size: 56px;
+}
     
+}

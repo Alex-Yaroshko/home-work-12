@@ -7,13 +7,23 @@
  @mixin color-black {
      color: #000000;
  }
-
-
-
-
 // HEADER
 .nav a:hover {
     color: #E8244F;
+}
+// INTRO
+
+.img1-1 {
+    animation: 15s linear infinite;
+        animation-name: rotate;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 // INFO
@@ -54,7 +64,27 @@
     cursor: pointer;
 }
 }
+// MARQUEE
+.scroll {
+    font-size: 114px;
+    animation: marquee 12s linear infinite;
+    display: inline-block;
+    padding: 2px 30px;
+    transition: all .3s ;
+    color: #888;
+}
+@keyframes marquee {
+ 0% {
+    transform: translateX(0);
+}
 
+100% {
+    transform: translateX(-100%);
+}
+}
+.scroll-rev {
+    animation-direction: reverse;
+}
 // ABOUT
 .about__inner {
     & img {transition: .3s;}
@@ -70,3 +100,4 @@
 .footer__lic-inner-span:hover {
     @include color-pink;
 }
+

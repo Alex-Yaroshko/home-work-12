@@ -13,10 +13,7 @@
     color: #000000;
 }
 
-// 
-
-
-
+// *********
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -165,15 +162,6 @@ nav {
         text-decoration: none;
     }
 }
-
-
-
-
-
-
-
-
-
 // INSPIRACJE
 .inspiracje__intro {
     @include normal400;
@@ -216,17 +204,6 @@ nav {
         padding-top: 21px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 // FOOTER
 .footer {
     @include normal400;
@@ -254,8 +231,6 @@ nav {
         }
     }
 }
-
-
 // to-top
 .to-top a {
     @include normal400;
