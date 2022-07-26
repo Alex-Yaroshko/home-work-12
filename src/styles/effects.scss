@@ -16,7 +16,6 @@
     color: #E8244F;
 }
 
-
 // INFO
 .info__div {
     transition: .3s;
@@ -35,7 +34,10 @@
         border-radius: 4px;
     }
 }
-
+// BURGER MENU
+#burger, [for=burger] {
+    display: none;
+}
 // HISTORJE
 .historie__intro{
     & img {transition: .3s;}

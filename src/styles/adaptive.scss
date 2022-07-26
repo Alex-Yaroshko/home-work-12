@@ -2,6 +2,55 @@
 
 // 768px
 @media (max-width:767px) {
+    // BURGIR MENU
+    [for=burger] {
+        display: block;
+        position: fixed;
+        width:30px;
+        text-align: center;
+        right: 20px;
+        top:30px;
+    }
+    [for=burger]:before {
+        content: '☰';
+        color: #E8244F;
+    }
+    nav {
+        display:none;
+        margin-top: 170px;
+        background-color: black;
+        width: 80%;
+        z-index: 3;
+        border-radius: 4px;
+        user-select: none;
+    }
+    nav ul {
+        list-style-type: none;
+    }
+    nav li {
+        padding:10px;
+        border-bottom: solid 0.5px white;
+    }
+    #burger:checked + label + nav {
+        display: block;
+        position: fixed;
+        animation: show 1s ease;
+    }
+    #burger:checked +[for=burger]:before {
+        content: 'X';
+        color: #E8244F;
+    }
+    @keyframes show {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    
+    // ************
     .tabs__spans a {
         font-size: 50px;
         line-height: 80px;
@@ -263,3 +312,9 @@
     }
 }
 }
+@media (min-width:764px) {
+    .nav ul li {
+        display: inline;
+    }
+}
+    
