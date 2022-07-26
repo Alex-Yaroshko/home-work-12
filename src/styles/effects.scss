@@ -20,23 +20,47 @@
 // INFO
 .info__div {
     transition: .3s;
+    &-circle svg {
+        transition: .3s;
+        fill: white;
+    }
+    &-circle svg:hover {
+        fill: #E8244F;
+        stroke: #FFFFFF;
+        cursor: pointer;
+    }
     &:hover {
         background-color: black;
         @include color-white;
-        cursor: pointer;
         border-radius: 4px;
     }
 }
 
 // HISTORJE
 .historie__intro{
-    transition: .3s;
+    & img {transition: .3s;}
+    & img:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+}
+// inspiracje
+.inspiracje__intro{
+    & img {transition: .3s;}
     & img:hover {
     opacity: 70%;
     cursor: pointer;
 }
 }
 
+// ABOUT
+.about__inner {
+    & img {transition: .3s;}
+    & img:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+}
 // Footer
 .footer__lic-inner-span {
     transition: .3s;

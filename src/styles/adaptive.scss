@@ -226,21 +226,8 @@
     }
 
     .info__div {
-        & h3 {
-            font-size: 16px;
-            line-height: 18px;
-            }
-            &-p2 {
-                padding-right: 0px;
-                padding-left: 0px;
-            }
-            &-p3 {
-                padding-right: 0px;
-                padding-left: 0px;
-            }
-            &-p4 {
-                padding-right: 0px;
-                padding-left: 0px;
+            & p {
+                display: none;
             }
 
     }
