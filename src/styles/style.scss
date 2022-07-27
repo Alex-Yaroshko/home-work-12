@@ -384,10 +384,9 @@
         justify-content: space-between;
         margin-top:230px;
         &-inner {
-            max-width: fit-content;
-            &-span {
-                padding-left: 85px;
-            }
+            display: flex;
+            justify-content: space-between;
+            gap:30px;
         }
     }
 }
