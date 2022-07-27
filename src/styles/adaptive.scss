@@ -1,0 +1,389 @@
+
+// 768px
+@media (max-width:767px) {
+    // BURGIR MENU
+    [for=burger] {
+        display: block;
+        position: fixed;
+        width:30px;
+        text-align: center;
+        right: 20px;
+        top:40px;
+    }
+    [for=burger]:before {
+        content: '☰';
+        color: #E8244F;
+    }
+    .nav {
+        display:none;
+        margin-top: 170px;
+        background-color: black;  
+        width: 100%;
+        left:0;
+        z-index: 3;
+        border-radius: 4px;
+        user-select: none;
+    }
+    .nav ul {
+        list-style-type: none;
+    }
+    .nav li {
+        padding:10px;
+        border-bottom: solid 0.5px white;
+    }
+    #burger:checked + label + .nav {
+        display: block;
+        position: fixed;
+        animation: show 1s ease;
+    }
+    #burger:checked +[for=burger]:before {
+        content: 'X';
+        color: #E8244F;
+    }
+    @keyframes show {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    // ************
+    .tabs__spans a {
+        font-size: 50px;
+        line-height: 80px;
+    }
+    .tabs__inner {
+        display: flex;
+        gap: 125px;
+        h3 {
+            font-size: 40px;
+            line-height: 40px;
+        }
+        p {
+            font-size: 14px;
+            line-height: 20px;
+        }
+}
+    .intro__title {
+        font-size: 80px;
+        line-height: 80px;
+    }
+    .intro__subtitle {
+        &-inner1 {
+            font-size: 16px;
+            line-height: 15px;
+            max-width: 330px;
+        }
+        &-inner2 {
+            max-width: 100px;
+            & h3 {
+                padding-bottom: 5px;
+            }
+        }
+    }
+    .info {
+        padding:0px;
+    }
+    .info__div  {
+        & h3 {
+        font-size: 28px;
+        line-height: 55px;
+        }
+        & p {
+            font-size: 10px;
+            line-height: 21px;
+        }
+    }
+    .historie {
+        img {
+            max-width: 100%;
+        }
+        &__intro-item-1 {
+            font-size: 60px;
+        }
+    }
+    .inspiracje {
+    img {
+        max-width: 100%;
+    &__intro-item-2 h3 {
+        font-size: 60px;
+    }
+    }
+    }
+    .about {
+        &__inner {
+            gap:10px;
+            &-left {
+                padding-top: 30px;
+            }
+            &-right p {
+                font-size: 24px;
+                line-height: 24px;
+            }
+            &-right {
+                & p {
+                    padding-top: 10px;
+                }
+            .about-sign {
+                gap:10px;
+                & p {
+                    padding-top: 21px;
+                }
+            }
+            }
+        }
+    }
+    .footer__mail a {
+        font-size: 55px;
+        line-height: 87px;
+    }
+    .scroll {
+        font-size: 100px;
+    }
+}
+// 1024px
+@media (max-width:1024px) {
+    .intro {
+        &__title {
+            & :nth-child(1) {
+                padding-left: 0px;
+            }
+            & :nth-child(2) {
+                padding-left: 0px;
+            }
+            & :nth-child(3) {
+                padding-left: 0px;
+            }
+    
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .tabs, .labels, .historie, .about, 
+    .info, .inspiracje, .marquee, .footer {
+        padding: 50px 0px;
+    }
+    .labels__title {
+        margin-bottom: 60px;
+    }
+    .historie__intro {
+        font-size: 18px;
+        line-height: 22px;
+        display:grid;
+        grid-template-areas: 'item-1 item-1'
+                            'item-2 item-3'
+                            'item-4 item-5'
+                            'item-6 item-7'
+                            'item-8 item-9'
+                            'item-10 item-11';
+        grid-template-columns: repeat(2, 1fr) ;
+        gap:10px;
+        & p {
+            max-width: 315px;
+        }
+        &-item-1 {
+            font-size: 100px;
+        }
+        &-item-3 {
+            padding: 5px;
+            font-size: 22px;
+            line-height: 22px;
+            
+        }
+        &-item-11 {
+            padding: 0;
+            font-size: 22px;
+            line-height: 23px;
+        }
+    }
+    .inspiracje {
+        &__intro {
+        display:grid;
+        grid-template-areas: 'item-2 item-2'
+                            'item-1 item-3 '
+                             'item-4 item-5'
+                            'item-6 item-8'
+                            'item-9 item-7';
+        grid-template-columns: repeat(2, 1fr) ;
+        gap:10px; 
+        &-item-2 {
+            padding: 0;
+
+            & h3 {
+                font-size: 100px;
+            }
+        }
+        }
+    }
+    .tabs__spans  {
+        overflow: scroll;
+    }
+    .info h5 {
+        margin: 0;
+        padding: 0;
+    }
+}
+// 480px
+@media (max-width:480px) {
+    .labels__title {
+        margin-bottom: 30px;
+    }
+    .historie {
+        &__intro-item-1 {
+            font-size: 50px;
+            line-height: 60px;
+        }
+        &__intro-item-3 {
+            font-size: 16px;
+        }
+    }
+    .inspiracje {
+        padding-top: 50px;
+        &__intro-item-2 h3 {
+            font-size: 50px;
+        }
+    }
+    .tabs {
+        &__inner {
+            display: flex;
+            gap: 60px;
+            padding-right: 10px;
+            h3 {
+                font-size: 26px;
+                line-height: 24px;
+            }
+            p {
+                font-size: 14px;
+                line-height: 16px;
+            }
+    }
+        &__items {
+            font-size: 10px;
+            line-height: 24px;
+        }
+        &__spans a {
+            font-size: 35px;
+            line-height: 60px;
+        }
+    }
+
+    .intro__title {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .info__div {
+            & p {
+                display: none;
+            }
+
+    }
+    .about {
+        &__inner {
+            &-left {
+                & p {
+                    font-size: 18px;
+                    line-height: 26px;
+                }
+            }&-right p {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            &-right {
+                & p {
+                    padding-top: 10px;
+                }
+            .about-sign {
+                gap:10px;
+                & p {
+                    padding-top: 10px;
+                }
+            }
+            }
+        }
+    }
+    .footer__mail {
+        max-width: 280px;
+    & a {
+        font-size: 41px;
+        line-height: 69px;
+    }
+}
+.footer__lic {
+    margin-top: 130px;
+}
+.footer__links {
+    margin-top: 70px;
+}
+.marquee__container {
+    padding: 20px;
+}
+.scroll {
+    font-size: 70px;
+}
+}
+@media (min-width:764px) {
+    .nav ul li {
+        display: inline;
+    }
+}
+
+@media (max-width:320px) {
+       .labels__title {
+        margin-bottom: 15px;
+    }
+    .tabs, .labels, .historie, .about, 
+    .info, .inspiracje, .marquee, .footer {
+        padding: 25px 0px;
+    }
+    .historie{
+        padding-top: 0px;
+    &__intro {
+        display:grid;
+        grid-template-areas: 'item-1' 
+                            'item-2' 
+                            'item-3' 
+                            'item-4' 
+                            'item-5' 
+                            'item-6' 
+                            'item-7'
+                            'item-8'
+                            'item-9'
+                            'item-10'
+                            'item-11';
+        grid-template-columns: repeat(1, 1fr) ;
+        gap:10px;
+    }
+}
+.inspiracje {
+    padding-top: 0px;
+    &__intro-item-2 h3 {
+        line-height: 80px;
+    }
+&__intro {
+    display:grid;
+    grid-template-areas: 'item-2' 
+                        'item-1' 
+                        'item-3' 
+                        'item-4' 
+                        'item-5' 
+                        'item-6' 
+                        'item-7'
+                        'item-8'
+                        'item-9';
+    grid-template-columns: repeat(1, 1fr) ;
+    gap:10px;
+}
+}
+.about__inner {
+    flex-direction: column;
+}
+.marquee__container {
+    padding: 15px;
+}
+.scroll {
+    font-size: 56px;
+}   
+}

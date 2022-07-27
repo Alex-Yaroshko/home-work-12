@@ -1,5 +1,101 @@
+@mixin color-pink {
+    color: #E8244F;
+ }
+ @mixin color-white {
+     color:#FFFFFF;
+ }
+ @mixin color-black {
+     color: #000000;
+ }
 // HEADER
 .nav a:hover {
-    text-decoration: underline;
-    opacity: 1;
+    color: #E8244F;
 }
+// INTRO
+.img1-1 {
+    animation: 15s linear infinite;
+        animation-name: rotate;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+// INFO
+.info__div {
+    transition: .3s;
+    &-circle svg {
+        transition: .3s;
+        fill: white;
+    }
+    &-circle svg:hover {
+        fill: #E8244F;
+        stroke: #FFFFFF;
+        cursor: pointer;
+    }
+    &:hover {
+        background-color: black;
+        @include color-white;
+        border-radius: 4px;
+    }
+}
+// BURGER MENU
+#burger, [for=burger] {
+    display: none;
+}
+// HISTORJE
+.historie__intro{
+    & img {transition: .3s;}
+    & img:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+}
+// inspiracje
+.inspiracje__intro{
+    & img {transition: .3s;}
+    & img:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+}
+// MARQUEE
+.scroll {
+    font-size: 114px;
+    animation: marquee 12s linear infinite;
+    display: inline-block;
+    padding: 2px 30px;
+    transition: all .3s ;
+    color: #888;
+}
+@keyframes marquee {
+ 0% {
+    transform: translateX(0);
+}
+
+100% {
+    transform: translateX(-100%);
+}
+}
+.scroll-rev {
+    animation-direction: reverse;
+}
+// ABOUT
+.about__inner {
+    & img {transition: .3s;}
+    & img:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+}
+// Footer
+.footer__lic-inner-span {
+    transition: .3s;
+}
+.footer__lic-inner-span:hover {
+    @include color-pink;
+}
+
