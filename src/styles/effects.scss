@@ -11,17 +11,51 @@
 .nav a:hover {
     color: #E8244F;
 }
+
+// HEADER
+.header__logo-img:hover {
+    animation: tremble 3s linear infinite;
+    cursor: pointer;
+}
+
+@keyframes tremble {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
 // INTRO
 .img1-1 {
-    animation: 15s linear infinite;
+    animation: 15s  infinite;
         animation-name: rotate;
 }
 @keyframes rotate {
     0%{
         transform: rotate(0deg);
     }
-    100%{
+    50%{
         transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(-360deg);
     }
 }
 // INFO
